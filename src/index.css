@@ -1,0 +1,86 @@
+/* Fonts — self-hosted via @fontsource (no external requests) */
+@import "@fontsource/newsreader/400.css";
+@import "@fontsource/newsreader/400-italic.css";
+@import "@fontsource/newsreader/500.css";
+@import "@fontsource/newsreader/600.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f4eee3;
+  --paper-sunk: #ede6d8;
+  --ink: #1c1814;
+  --ink-muted: #6b6157;
+  --hairline: #d8cdbb;
+  --machine-bg: #16130f;
+  --machine-fg: #f0e9db;
+  --machine-line: #322b22;
+  --signal: #e4502a;
+  --signal-deep: #b5341a;
+  --cat-1: #e4502a;
+  --cat-2: #2f5fd0;
+  --cat-3: #1f9e8a;
+  --cat-4: #c9a227;
+  --cat-5: #8b4a9c;
+  --cat-6: #5b6770;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: clamp(1.05rem, 1.25vw, 1.25rem);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--signal);
+  color: var(--paper);
+}
+
+/* Reusable primitives */
+.u-measure {
+  max-width: 62ch;
+  margin-inline: auto;
+}
+
+.u-label {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.u-display {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+
+.u-num {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
