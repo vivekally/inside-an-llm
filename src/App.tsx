@@ -1,10 +1,17 @@
 import { Hero } from "./components/Hero";
 import { Section } from "./components/Section";
 import { Footer } from "./components/Footer";
+import { ProgressRail } from "./components/ProgressRail";
+import { Act1Eliza } from "./components/acts/Act1Eliza";
+import { Act2Shannon } from "./components/acts/Act2Shannon";
+import { Act3Xor } from "./components/acts/Act3Xor";
+import { Act4Bpe } from "./components/acts/Act4Bpe";
+import { Act5Embeddings } from "./components/acts/Act5Embeddings";
 
 export default function App() {
   return (
     <main>
+      <ProgressRail />
       <Hero />
 
       <Section id="intro">
@@ -28,15 +35,21 @@ export default function App() {
         </div>
       </Section>
 
+      <Act1Eliza />
+      <Act2Shannon />
+      <Act3Xor />
+      <Act4Bpe />
+      <Act5Embeddings />
+
       <Section machine>
         <div className="u-measure text-center">
           <p className="u-label mb-6" style={{ color: "var(--machine-fg)", opacity: 0.7 }}>
-            Coming, act by act
+            Halfway · the engine room next
           </p>
           <p className="u-display text-[clamp(1.4rem,3vw,2.25rem)]">
-            The rest of the story is being built right now — chatbots before
-            LLMs, what a “model” really is, tokens, embeddings, attention,
-            sampling, and how autocomplete became an assistant.
+            You've got tokens turned into meaning. Next comes the machine that
+            reads them all at once and decides what to say — attention, sampling,
+            and the leap from autocomplete to assistant. Being built now.
           </p>
         </div>
       </Section>
