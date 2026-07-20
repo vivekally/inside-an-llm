@@ -11,12 +11,14 @@ import shannon
 import train_xor
 import train_bpe
 import train_embeddings
+import train_transformer
 
 STEPS = [
     ("act2 shannon", shannon.build),
     ("act3 xor", train_xor.build),
     ("act4 bpe", train_bpe.build),
     ("act5 embeddings", train_embeddings.build),
+    ("acts 6-7 transformer", train_transformer.build),
 ]
 
 

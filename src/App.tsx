@@ -7,6 +7,10 @@ import { Act2Shannon } from "./components/acts/Act2Shannon";
 import { Act3Xor } from "./components/acts/Act3Xor";
 import { Act4Bpe } from "./components/acts/Act4Bpe";
 import { Act5Embeddings } from "./components/acts/Act5Embeddings";
+import { Act6Attention } from "./components/acts/Act6Attention";
+import { Act7Sampling } from "./components/acts/Act7Sampling";
+import { Act8Assistant } from "./components/acts/Act8Assistant";
+import { Act9Agents } from "./components/acts/Act9Agents";
 
 export default function App() {
   return (
@@ -44,15 +48,19 @@ export default function App() {
       <Section machine>
         <div className="u-measure text-center">
           <p className="u-label mb-6" style={{ color: "var(--machine-fg)", opacity: 0.7 }}>
-            Halfway · the engine room next
+            Into the engine room
           </p>
           <p className="u-display text-[clamp(1.4rem,3vw,2.25rem)]">
-            You've got tokens turned into meaning. Next comes the machine that
-            reads them all at once and decides what to say — attention, sampling,
-            and the leap from autocomplete to assistant. Being built now.
+            You've turned words into meaning. Now the part that made modern AI
+            possible: reading it all at once, and deciding what to say.
           </p>
         </div>
       </Section>
+
+      <Act6Attention />
+      <Act7Sampling />
+      <Act8Assistant />
+      <Act9Agents />
 
       <Footer />
     </main>
